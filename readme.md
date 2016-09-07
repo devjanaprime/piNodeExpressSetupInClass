@@ -72,4 +72,26 @@ setting up a POST route that can be called from our site via AJAX
 * note that the url is the same as the route in app.js
 * restart server and refresh page
 * click the button, yo
- ![alt text](images/success.png)
+![alt text](images/success.png)
+
+using body-parser for POSTing with AJAX
+---------------------------------------
+we'll need body-parser's urlencoded to be able to send data to our new POST route.
+
+* install body-parser at terminal with 'npm install body-parser --save'
+![alt text](images/installBodyParser.png)
+* require it in 'app.js' and add our urlencodedParser variable that uses bodyParser's urlencoded:
+![alt text](images/requireBodyParser.png)
+* now we'll need some inputs for the user
+![alt text](images/htmlInputs.png)
+* next, we'll need to update our jQuery button to handle the user inputs
+* first, retrieve the inputs
+* next assemble the object to send via ajaxCall
+* next make the AJAX call
+![alt text](images/onClick.png)
+* finally, let's update the post route in app.js to do something with the new object
+![alt text](images/updatePost.png)
+* restart your server
+* refresh your page
+* you should now be able to send creatures to the server, see the the object sent in the terminal, and see the animal sent in the console of the browser from the response:
+![alt text](images/output.png)
