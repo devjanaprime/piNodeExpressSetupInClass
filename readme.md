@@ -44,3 +44,15 @@ set up to serve an html file
 * create 'index.html' in 'public' folder
 * update 'app.get' to send this in response from a resolved path
 ![alt text](images/pathResolve.png)
+
+setup public folder for common resources
+----------------------------------------
+* add 'app.use' to setup "public" folder as a static resource
+![alt text](images/expressStatic.png)
+* inside here add a 'scripts' folder
+* within scripts add a js file ('example.js' is used here)
+* source the js as you would normally in the html
+* restart server and check that the sourcing is working
+![alt text](images/staticSourced.png)
+* also add a 'vendors' folder within which you can place JQuery
+* source JQuery in your html file as usual

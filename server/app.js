@@ -12,3 +12,6 @@ app.get( '/', function( req, res ){
   // send index file from resolved path
   res.sendFile( path.resolve( 'public/index.html') );
 }); // end base url
+
+// setup public folder
+app.use( express.static( 'public' ) );
