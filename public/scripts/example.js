@@ -12,5 +12,5 @@ $( document ).ready( function(){
         console.log( 'ajax success:', data );
       } // end success
     }); // end ajax
-  })
-});
+  }) // end sendInfo on click
+}); // end doc ready
