@@ -1,19 +1,20 @@
 Pi Node Express Setup In Class
 ==============================
 
-step by step instructions
--------------------------
-
+basic setup
+-----------
 * create project folder
 * 'npm init' in this folder in terminal
 * fill out project details (as much as you feel the need)
 * you should now have 'package.json' in this folder
+
 
 installing dependencies
 -----------------------
 * 'npm install express --save' in terminal
 * you'll get some feedback in terminal, then will see a new "node_modules" folder
 * also, 'package.json' will have 'express' and a version listed in a new dependencies portion
+
 
 create your server
 -------------------
@@ -28,6 +29,7 @@ create your server
 ![alt text](images/server_2.png)
 * remember: console.log on server side will show in terminal
 
+
 create a route for the server
 -----------------------------
 * add a base route "app.get"
@@ -35,6 +37,7 @@ create a route for the server
 * restart server
 * refresh "localhost:3000" in browser
 * observe the awesome
+
 
 set up to serve an html file
 ----------------------------
@@ -44,6 +47,7 @@ set up to serve an html file
 * create 'index.html' in 'public' folder
 * update 'app.get' to send this in response from a resolved path
 ![alt text](images/pathResolve.png)
+
 
 setup public folder for common resources
 ----------------------------------------
@@ -56,3 +60,16 @@ setup public folder for common resources
 ![alt text](images/staticSourced.png)
 * also add a 'vendors' folder within which you can place JQuery
 * source JQuery in your html file as usual
+
+
+setting up a POST route that can be called from our site via AJAX
+-----------------------------------------------------------------
+* add a "app.post" route to app.js. This will receive some basic text so we'll call the route 'texter'. This wil both log something out server side and, for now, just send some text response
+![alt text](images/postRoute.png)
+* add a button on html with an id of 'sendInfo'. We'll use this to trigger an AJAX call to the new post route
+* add an on click JQuery for this button that will make an AJAX call to the url of our new post route. It'll also send a dummy object.
+![alt text](images/ajaxCall.png)
+* note that the url is the same as the route in app.js
+* restart server and refresh page
+* click the button, yo
+ ![alt text](images/success.png)

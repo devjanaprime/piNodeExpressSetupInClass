@@ -13,5 +13,11 @@ app.get( '/', function( req, res ){
   res.sendFile( path.resolve( 'public/index.html') );
 }); // end base url
 
+// post route receives info from client
+app.post( '/texter', function( req, res ){
+  console.log( 'texter hit' );
+  res.send( 'texter response' )
+});
+
 // setup public folder
 app.use( express.static( 'public' ) );
