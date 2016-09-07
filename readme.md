@@ -20,18 +20,18 @@ create your server
 * create 'server' folder
 * create 'app.js' inside server folder
 * require express and create an express app variable
-![alt text](pics/server_0.png)
+![alt text](images/server_0.png)
 * spin up a server on a port with the 'app.listen' command
-![alt text](pics/server_1.png)
+![alt text](images/server_1.png)
 * start server ('node server/app.js' in terminal)
 * you should see "server is listening on port 3000" in your terminal
-![alt text](pics/server_2.png)
+![alt text](images/server_2.png)
 * remember: console.log on server side will show in terminal
 
 create a route for the server
 -----------------------------
 * add a base route "app.get"
-![alt text](pics/helloWorldServer.png)
+![alt text](images/helloWorldServer.png)
 * restart server
 * refresh "localhost:3000" in browser
 * observe the awesome
@@ -39,8 +39,8 @@ create a route for the server
 set up to serve an html file
 ----------------------------
 * require path module
-![alt text](pics/requirePath.png)
+![alt text](images/requirePath.png)
 * create 'public' folder in project root
 * create 'index.html' in 'public' folder
 * update 'app.get' to send this in response from a resolved path
-![alt text](pics/pathResolve.png)
+![alt text](images/pathResolve.png)
